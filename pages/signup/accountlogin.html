@@ -11,7 +11,7 @@
 <body>
     <main>
         <h2>SIGNIN FORM</h2>
-        <form role="form" onsubmit="signIn(event);" autocomplete="off">
+        <form? role="form" onsubmit="signIn(event);" autocomplete="off">
             <div class="form-group">
                 <input type="email" name="email" id="email" placeholder="Email Address" required>
             </div>
@@ -23,8 +23,10 @@
 
 
             <div class="form-group">
-                <button class="signin" type="submit">Sign In</button>
+                <form method="get" action="../checkout-page.html">
+                <button class="signin" type="submit" onClick="signIn()">Sign In</button>
             </form> 
+        </form>
                 <div class="options">
                Need to create an account? <a href="../signup/login.html" id="Signin">Sign Up</a>
                 </div>

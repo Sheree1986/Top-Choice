@@ -20,7 +20,7 @@ const signUp = e => {
         alert("Account Created.\n\nPlease Sign In using the link below.");
     }
     else{
-        alert("Ooopppssss... Duplicate found!!!\nYou have already sigjned up");
+        alert("Sorry... Duplicate found!!!\nYou have already signed up");
     }
     e.preventDefault();
 }
@@ -30,11 +30,13 @@ function signIn(e) {
     let formData = JSON.parse(localStorage.getItem('formData')) || [];
     let exist = formData.length && 
     JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
-    if(!exist){
-        alert("Incorrect login credentials");
+    if (email === "user@gmail.com" && password === "user") {
+        location.href = "../checkout-page.html";
+     
+    
+  
+} else {
+    alert("Invalid information");
+    return;
     }
-    else{
-        location.href = "/";
-    }
-    e.preventDefault();
 }
