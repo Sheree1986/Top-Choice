@@ -1,4 +1,6 @@
-const signup = document.querySelector(".signup");
+        const signup = document.querySelector(".signup");
+        const signin = document.querySelector(".signin");
+        const conCond = document.querySelector("#accept1");
         const termCond = document.querySelector("#accept");
         const password = document.querySelector("#password");
         const confirmPassword = document.querySelector("#confirmPassword");
@@ -14,7 +16,7 @@ const signup = document.querySelector(".signup");
             // now lets check the password entered by the user
             password.addEventListener('keyup', () => {
                 if (passwordPattern.test(password.value)) {
-                    password.style.borderColor = 'green' // if password pattern matches the border of password input will ne green
+                    password.style.borderColor = 'green' // if password pattern matches the border of password input will be green
                     pwd_format.style.color = 'green'
                 } else {
                     password.style.borderColor = 'red'
@@ -31,7 +33,7 @@ const signup = document.querySelector(".signup");
             pwd_format.style.display = 'block';
             confirmPassword.addEventListener('keyup', () => {
                 if (passwordPattern.test(confirmPassword.value) && password.value === confirmPassword.value) {
-                    confirmPassword.style.borderColor = 'green' // if password pattern matches the border of password input will ne green
+                    confirmPassword.style.borderColor = 'green' // if password pattern matches the border of password input will be green
                     pwd_format.style.color = 'green'
                 } else {
                     confirmPassword.style.borderColor = 'red'
@@ -51,4 +53,14 @@ const signup = document.querySelector(".signup");
                 signup.disabled = true;
             }
         })
+
+
+        termCond.addEventListener('changeone', () => {
+            if (conCond.checked === true) {
+                signin.disabled = false;
+            } else if (conCond.checked === false) {
+                signin.disabled = true;
+            }
+        })
+    
     

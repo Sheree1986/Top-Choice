@@ -74,6 +74,12 @@
             margin: auto;
             font-size: 15px;
         }
+        .accept-boxone {
+            display: flex;
+            align-items: center;
+            margin: auto;
+            font-size: 15px;
+        }
         
         a {
             color: white;
