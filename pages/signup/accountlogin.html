@@ -9,40 +9,28 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <h2>Login</h2>
-
-        <form action="">
- 
-
-            <div class="form-item">
-                <input type="username" name="username" id="username" placeholder="Username">
+    <main>
+        <h2>SIGNIN FORM</h2>
+        <form role="form" onsubmit="signIn(event);" autocomplete="off">
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="pwd" id="pwd" placeholder="Password" required>
             </div>
 
-            <div class="form-item">
-                <!-- add a password format display -->
-                <span class="pwd-format">
-                    8-15 AlphaNumeric Characters
-                </span>
-                <input type="password" name="password" id="password" placeholder="Enter password">
-
-            </div>
-            <div class="accept-boxone">
-                <input type="checkbox" name="acceptone" id="acceptone">
-                <p>captcha  <st>Click here to confirm you are human</st></p>
-            </div>
+         
 
 
-            <div class="form-btns">
-                <button class="signin" type="submit" disabled>Sign In</button>
+            <div class="form-group">
+                <button class="signin" type="submit">Sign In</button>
+            </form> 
                 <div class="options">
                Need to create an account? <a href="../signup/login.html" id="Signin">Sign Up</a>
                 </div>
             </div>
-
-        </form>
-        <p>Copyright &copy; TopChoice.com</p>
+        </main>
+        <footer>Copyright &copy; TopChoice.com</footer>
     </div>
 
 

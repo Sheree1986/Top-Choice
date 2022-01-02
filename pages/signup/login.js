@@ -1,66 +1,40 @@
-        const signup = document.querySelector(".signup");
-        const signin = document.querySelector(".signin");
-        const conCond = document.querySelector("#accept1");
-        const termCond = document.querySelector("#accept");
-        const password = document.querySelector("#password");
-        const confirmPassword = document.querySelector("#confirmPassword");
-        const pwd_format = document.querySelector(".pwd-format");
-        // lets define a password format
-        // The password should contain around 8-15 alhpanumeric character
+const signUp = e => {
+    let fname = document.getElementById('fname').value,
+        lname = document.getElementById('lname').value,
+        email = document.getElementById('email').value,
+        pwd = document.getElementById('pwd').value;
 
-        const passwordPattern = /^[a-zA-Z0-9]{8,15}$/
+    let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
-        password.addEventListener('focusin', () => {
-            pwd_format.style.display = 'block';
+    let exist = formData.length && 
+        JSON.parse(localStorage.getItem('formData')).some(data => 
+            data.fname.toLowerCase() == fname.toLowerCase() && 
+            data.lname.toLowerCase() == lname.toLowerCase()
+        );
 
-            // now lets check the password entered by the user
-            password.addEventListener('keyup', () => {
-                if (passwordPattern.test(password.value)) {
-                    password.style.borderColor = 'green' // if password pattern matches the border of password input will be green
-                    pwd_format.style.color = 'green'
-                } else {
-                    password.style.borderColor = 'red'
-                    pwd_format.style.color = 'red'
-                }
-            })
-        })
+    if(!exist){
+        formData.push({ fname, lname, email, pwd });
+        localStorage.setItem('formData', JSON.stringify(formData));
+        document.querySelector('form').reset();
+        document.getElementById('fname').focus();
+        alert("Account Created.\n\nPlease Sign In using the link below.");
+    }
+    else{
+        alert("Ooopppssss... Duplicate found!!!\nYou have already sigjned up");
+    }
+    e.preventDefault();
+}
 
-        password.addEventListener('focusout', () => {
-            pwd_format.style.display = 'none';
-        })
-
-        confirmPassword.addEventListener('focusin', () => {
-            pwd_format.style.display = 'block';
-            confirmPassword.addEventListener('keyup', () => {
-                if (passwordPattern.test(confirmPassword.value) && password.value === confirmPassword.value) {
-                    confirmPassword.style.borderColor = 'green' // if password pattern matches the border of password input will be green
-                    pwd_format.style.color = 'green'
-                } else {
-                    confirmPassword.style.borderColor = 'red'
-                    pwd_format.style.color = 'red'
-                }
-            })
-        })
-
-        confirmPassword.addEventListener('focusout', () => {
-            pwd_format.style.display = 'none';
-        })
-
-        termCond.addEventListener('change', () => {
-            if (termCond.checked === true) {
-                signup.disabled = false;
-            } else if (termCond.checked === false) {
-                signup.disabled = true;
-            }
-        })
-
-
-        termCond.addEventListener('changeone', () => {
-            if (conCond.checked === true) {
-                signin.disabled = false;
-            } else if (conCond.checked === false) {
-                signin.disabled = true;
-            }
-        })
-    
-    
+function signIn(e) {
+    let email = document.getElementById('email').value, pwd = document.getElementById('pwd').value;
+    let formData = JSON.parse(localStorage.getItem('formData')) || [];
+    let exist = formData.length && 
+    JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
+    if(!exist){
+        alert("Incorrect login credentials");
+    }
+    else{
+        location.href = "/";
+    }
+    e.preventDefault();
+}

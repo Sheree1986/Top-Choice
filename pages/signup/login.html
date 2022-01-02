@@ -8,51 +8,47 @@
     <title>Sign Up</title>
 </head>
 
-<body>
+<main>
+    <h2>SIGNUP FORM</h2>
+    <form role="form" onsubmit="signUp(event);" autocomplete="off">
+        <div class="form-group">
+            <input type="text" name="fname" id="fname" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+   
+            <input type="password" name="pwd" id="pwd" placeholder="Password" required>
 
-    <div class="container">
-        <h2>Sign Up</h2>
+        </div>
+        <div class="form-group">
 
-        <form action="">
-            <div class="form-item-username">
-                <input type="text" name="firstName" id="firstName"  autofocus placeholder="First Name">
-                <input type="text" name="lastName" id="lastName" placeholder="Last Name">
-            </div>
 
-            <div class="form-item">
-                <input type="email" name="email" id="email" placeholder="Email">
-            </div>
 
-            <div class="form-item">
-                <!-- add a password format display -->
-                <span class="pwd-format">
-                    8-15 AlphaNumeric Characters
-                </span>
-                <input type="password" name="password" id="password" placeholder="Enter password">
-                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password">
-            </div>
 
-            <div class="accept-box">
-                <input type="checkbox" name="accept" id="accept">
-                <p>I accept the <a href="../signup/terms.html">Terms & Conditions</a></p>
-            </div>
+         
           
-            <div class="form-btns">
+            <div class="form-group">
                 <a href="../signup/confirmation.html">
-                <button class="signup" type="submit" disabled >Sign Up</button>
+                <button class="signup" type="submit">Sign Up</button>
               
                      </a>
-                  
+                    </form>
                 <div class="options">
                     Already have an account? <a href="../signup/accountlogin.html" id="HaveAccount">Login here</a>
                 </div>
+                <a href="../signup/terms.html">Terms & Conditions</a>
             </div>
 
-        </form>
-        <p>Copyright &copy; TopChoice.com</p>
-    </div>
 
+        <footer>Copyright &copy; TopChoice.com</footer>
+    </footer>
 
+</main>
 
 </body>
 <script src="../signup/login.js"></script>

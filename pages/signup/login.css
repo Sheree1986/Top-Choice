@@ -15,7 +15,7 @@
             padding-top: 10vh;
         }
         
-        .container {
+        main {
             background: orangered;
             display: flex;
             flex-direction: column;
@@ -43,19 +43,19 @@
             font-size: 15px;
         }
         
-        .form-item-username {
+        .form-group-email {
             margin: 5px;
             display: flex;
             padding-bottom: 10px;
         }
         
-        .form-item-username input {
+        .form-group-email input {
             width: 150px;
             margin: 0 5px;
         }
         
-        .form-item {
-            margin: 0 auto;
+        .form-group {
+            margin: 20px 0;
             padding-bottom: 10px;
             display: flex;
             flex-direction: column;
@@ -63,7 +63,7 @@
             width: 90%;
         }
         
-        .form-item input {
+        .form-group input {
             margin: 5px;
             width: 100%;
         }
@@ -89,13 +89,13 @@
             color: grey
         }
         
-        .form-btns {
+        .form-group {
             display: flex;
             flex-direction: column;
             padding: 10px 0;
         }
         
-        .form-btns button {
+        .form-group button {
             margin: auto;
             font-size: 20px;
             padding: 8px;
@@ -107,13 +107,13 @@
             background: #fbba50;
         }
         
-        .form-btns button:disabled {
+        .form-group button:disabled {
             cursor: not-allowed;
             background: wheat !important;
             color: black!important;
         }
         
-        .form-btns button:hover {
+        .form-group button:hover {
             background: #d88a0c;
             color: antiquewhite;
         }
@@ -142,3 +142,7 @@
             display: none;
         }
     
+footer {
+    display: flex;
+    justify-content: center;
+}

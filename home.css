@@ -61,6 +61,7 @@ a.hover {
   list-style: none;
 }
 
+/* .product, */
 .new,
 .best,
 .sale {
@@ -70,7 +71,12 @@ a.hover {
   text-decoration: none;
   list-style: none;
 }
-
+/* 
+.product {
+  grid-column: 8/9;
+  font-family: "Pinyon Script", cursive;
+  font-family: "Bebas Neue", cursive;
+} */
 .new {
   grid-column: 7/8;
   font-family: "Pinyon Script", cursive;
