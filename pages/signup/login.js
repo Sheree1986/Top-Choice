@@ -28,15 +28,18 @@ const signUp = e => {
 function signIn(e) {
     let email = document.getElementById('email').value, pwd = document.getElementById('pwd').value;
     let formData = JSON.parse(localStorage.getItem('formData')) || [];
-    let exist = formData.length && 
-    JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
+    // let exist = formData.length && 
+    // JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
+    
+    
     if (email === "user@gmail.com" && password === "user") {
-        location.href = "../checkout-page.html";
+        location.href = "../checkout.html";
      
     
   
 } else {
     alert("Invalid information");
+    console.error();
     return;
     }
 }
