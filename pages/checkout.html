@@ -11,28 +11,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--Boostrap HTML-->
   </head>
-  <title> Top Choice Cart</title>
-  <!--Styling to Page that can be added to CSS-->
-  <body class="bg-light" style="min-height:8000px;"> 
+  <link rel="stylesheet" href="home.css">
+    <!--Boostrap HTML-->
+  </head>
+  <title> Top Choice Checkout</title>
+   
+  <!--Navigation Bar-->
+  <section class="main1">
+    <nav>
+      <ul class="navitems-container">
+        <li class="brand">
+          <a href="#" style="text-decoration: none">TopChoice</a>
+        </li>
+
+        <div class="bar">
+          <input class="searchbar" type="text" title="Search" />
+        </div>
+        <!-- <li class="product">
+          <a style="text-decoration: none" href="../pages/product.html">Product</a>
+        </li> -->
+        <li class="new">
+          <a style="text-decoration: none" href="../pages/newarrivals.html">New Arrivals</a>
+        </li>
+        <li class="best">
+          <a style="text-decoration: none" href="../pages/bestsellers.html">Popular</a>
+        </li>
+        <li class="sale">
+          <a style="text-decoration: none" href="../pages/sale.html">Sale</a>
+        </li>
+        <form method="get" action="../pages/signup/accountlogin.html">
+        <button class="btn-2">LogIn</button>
+      </form>
+        <div class="cart">
+          <div class="counter">0</div>
+          <img class="cart-icon" src="images/cart.png" alt="" />
+          
+        </div>
+      </ul>
+    </nav>
+  </section>
+<!--Nav Bar End-->
     <!--Container creates the area / section above the form-->
-    <div class = "container">
-    <!--Five pads of units will be applied to the image-->
-      <div class ="py-5 text-center">
-    <!--Insert Top Choice Logo// <img src = "" alt="Top Choice Logo"> width="72" height="72"-->
+    <section id="cart" class="pt-5 mt-5 container">
         <h2>Checkout</h2>
-        <p> Please fill out the form carefully so that each item makes it to you. </p>
-      </div>
-    </div>
+        <hr>
+    </section>
     <!--Container for the information that the customer will input-->
     <div class="container">
+      <!--Sign In Here-->
+      <a href="/pages/signup/accountlogin.html"> Returning Customer? Sign In here</a>
       <h4 class="mb-3">Billing Address</h4>   <!--mb-3 means margin 3-->
+     
       <!--validation that the name is correct for billing-->
       <form novalidate>
           <div class="row">
             <!--firstName-->
             <div class= "col-sm-6">
               <label for="firstName" class="form-label">First Name</label>
-              <input id="firstName" type="text" class="form-control">
+              <input id="firstName" type="text" class="form-control" placeholder="" value="" required>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -40,34 +76,44 @@
             <!--lastName-->
             <div class= "col-sm-6">
               <label for="lastName" class="form-label">Last Name</label>
-              <input id="lastName" type="text" class="form-control">
+              <input id="lastName" type="text" class="form-control" placeholder="" value="" required>
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
             </div>
-            <!--Country-->
-            <div class= "col-md-5">
-              <label for="country" class="form-label">Country</label>
-              <select id="country" 
-              class="form-control">
-                <option value=""> Choose...</option>
-                <option value="United States">United States</option>
-                <option value="Canada">Canada</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Other">Other</option> 
-              </select>
-              <div class="invalid-feedback">
-                Valid country is required.
-              </div>
+            <!--email address-->
+            <div class= "col-sm-6">
+                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                Valid email address is required for shipping updates.
+                </div>
             </div>
+
+            <!--phone number-->
+            <div class= "col-sm-6">
+                <label for="phoneNumber" class="form-label">Phone Number <span class="text-muted">(Optional)</span></label>
+                <input type="number" class="form-control" id="phoneNumber" placeholder="3011234567">
+                <div class="invalid-feedback">
+                Valid phone number is required for shipping updates.
+                </div>
+            </div>
+        
             <!--Street Address-->
             <div class= "col-md-6">
               <label for="streetAddress" class="form-label">Street Address</label>
-              <input id="streetAddress" type="text" class="form-control">
+              <input id="streetAddress" type="text" class="form-control" placeholder="123 Generation Drive" required>
               <div class="invalid-feedback">
                 Valid street address is required.
               </div>
             </div>
+             <!--Address2-->
+             <div class= "col-md-5">
+                <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                <input id="address2" text="text" class="form-control" placeholder="Apartment or suite">
+                <div class="invalid-feedback">
+                </div>
+              </div>
             <!--City-->
             <div class= "col-md-6">
               <label for="city" class="form-label">City</label>
@@ -108,6 +154,21 @@
                  Valid zipcode is required.
                 </div>
             </div>
+             <!--Country-->
+             <div class= "col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" 
+                class="form-control">
+                  <option value=""> Choose...</option>
+                  <option value="United States">United States</option>
+                  <option value="Canada">Canada</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Other">Other</option> 
+                </select>
+                <div class="invalid-feedback">
+                  Valid country is required.
+                </div>
+              </div>
 
             <!--Create margin for Same as Billing Checkbox-->
             <hr class="my-4">
@@ -118,31 +179,141 @@
                 <label class="form-check-label" for="sameAddress">Shipping address is the same as billing?</label>
               </div>
             </div>
+            <!--Create margin for the Shipping area-->
+            <hr class="my-4">
+            <!--Shipping area-->
+            <!--Container for the information that the customer will input-->
+    <div class="container">
+        <h4 class="mb-3">Shipping Address</h4>   <!--mb-3 means margin 3-->
+        <!--validation that the name is correct for billing-->
+        <form novalidate>
+            <div class="row">
+              <!--firstName-->
+              <div class= "col-sm-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input id="firstName" type="text" class="form-control" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <!--lastName-->
+              <div class= "col-sm-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input id="lastName" type="text" class="form-control" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+          
+              <!--Street Address-->
+              <div class= "col-md-6">
+                <label for="streetAddress" class="form-label">Street Address</label>
+                <input id="streetAddress" type="text" class="form-control" placeholder="123 Generation Drive" required>
+                <div class="invalid-feedback">
+                  Valid street address is required.
+                </div>
+              </div>
+               <!--Address2-->
+               <div class= "col-md-5">
+                  <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                  <input id="address2" text="text" class="form-control" placeholder="Apartment or suite">
+                  <div class="invalid-feedback">
+                  </div>
+                </div>
+              <!--City-->
+              <div class= "col-md-6">
+                <label for="city" class="form-label">City</label>
+                <input id="city" type="text" class="form-control">
+                <div class="invalid-feedback">
+                  Valid city is required.
+                </div>
+              </div>
+              <!--State-->
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select id="state" 
+                class="form-control">
+                  <option value=""> Choose...</option>
+                  <option value="Alabama">AL</option>
+                  <option value="Alaska">AK</option>
+                  <option value="Arizona">AZ</option>
+                  <option value="Arkansas">AR</option> 
+                  <option value="California">CA</option>
+                  <option value="Colorado">CO</option>
+                  <option value="Connecicut">CT</option> 
+                  <option value="Delaware">DE</option>
+                  <option value="Florida">FL</option>
+                  <option value="Georgia">GA</option>
+                  <option value="Hawaii">HI</option>
+                  <option value="Idaho">ID</option>
+                  <option value="Other">Other</option>  
+                </select>
+                <div class="invalid-feedback">
+                  Valid state is required.
+                </div>
+              </div>
+              <!--Zipcode-->
+              <div class="col-md-3">
+                <label for="Zipcode" class="form-label">Zipcode</label> 
+                <input id="zipcode" type="number" class="form-control">
+                <div class="invalid-feedback">
+                   Valid zipcode is required.
+                  </div>
+              </div>
+               <!--Country-->
+               <div class= "col-md-5">
+                  <label for="country" class="form-label">Country</label>
+                  <select id="country" 
+                  class="form-control">
+                    <option value=""> Choose...</option>
+                    <option value="United States">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Other">Other</option> 
+                  </select>
+                  <div class="invalid-feedback">
+                    Valid country is required.
+                  </div>
+                </div>
+  
             <!--Create margin for the Payment area-->
             <hr class="my-4">
             <!--Payment area-->
             <h4 class="mb-3">Payment</h4>
+            
             <!-- Payment Methods /Radio Buttons-->
-            <!--Credit-->
+            <!--Credit or Debit-->
             <div class="form-check">
               <input id="creditCard" name="paymentMethod" type="radio" class="form-check-input" checked required>
-              <label for="creditCard">Credit Card</label>
+              <label for="creditCard">Credit or Debit Card</label>
             </div>
-            <!--Debit-->
-            <div class="form-check">
+             
+            <div class= "form-check">
               <input id="debitCard" name="paymentMethod" type="radio" class="form-check-input" checked required>
-              <label for="directDebit">Debit</label>
+              <label for="PayPal"></label> 
+                <a href="https://www.paypal.com"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal"/></a>
+  
             </div>
 
-            <!--Paypal-->
-            <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" checked required>
-              <label for="paypal">PayPal</label>
-            </div>
-            
             <!--Credit Card Input Section-->
             <!--Full Name on Card-->
             <div class="row my-3">
+               <!--Type of Card-->
+             <div class= "col-md-5">
+              <label for="card-type" class="form-label">Type of Card</label>
+              <select id="card-type" 
+              class="form-control">
+                <option value=""> Choose...</option>
+                <option value="American Express">American Express</option>
+                <option value="Master Card">Master Card</option>
+                <option value="Visa Card">Visa Card</option>
+                <option value="Discover Network">Discover Network</option> 
+              </select>
+              <div class="invalid-feedback">
+                Valid card type is required.
+              </div>
+            </div>
+
               <div class="col-md-6">
                 <label for="fullName" class=form-label>Name on Card</label>
                 <input id="fullName" type="text" class="form-control">
@@ -150,6 +321,7 @@
                   Name on card is required.
                 </div>
               </div>
+
               <!--Credit Card Number-->
               <div class="col-md-6">
                 <label for="creditCardNumber" class=form-label>Credit card number</label>
@@ -178,11 +350,88 @@
 
           <hr class="my-4">
            
-          <button class= "btn btn-primary btn-lg btn-block">Purchase</button>
+          <button class= "btn btn-primary btn-md btn-block">Purchase</button>
             
           </div>
       </form>
     </div>
+
+    <!-- Footer Begins --> 
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="social-wrapper">
+          <ul>
+            <li>
+              <a href="#" target="_blank">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png"
+                  alt="Twitter Logo"
+                  class="twitter-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img
+                  src="https://www.mchenryvillage.com/images/instagram-icon.png"
+                  alt="Instagram Logo"
+                  class="instagram-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                  alt="Linkedin Logo"
+                  class="linkedin-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img
+                  src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico"
+                  alt="Facebook Logo"
+                  class="facebook-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img
+                  src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Google-plus-icon.png"
+                  alt="Googleplus Logo"
+                  class="googleplus-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img
+                  src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170"
+                  alt="Youtube Logo"
+                  class="youtube-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img
+                  src="http://www.iconarchive.com/download/i94258/designbolts/vector-foursquare/Foursquare-2.ico"
+                  alt="Foursquare Logo"
+                  class="foursquare-icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+  
+        <nav class="footer-nav" role="navigation">
+          <p>
+            Copyright &copy; 2021-
+            <?php echo date("Y"); ?>
+            TopChoice. All rights reserved.
+          </p>
+        </nav>
+      </footer>
+  
+      <script src="home.js"></script>
+    </body>
+  </html>
+  <!--Footer Ends-->
 
     <!-- Optional JavaScript -->
     <!-- Popper  JS first, then Bootstrap JS -->
