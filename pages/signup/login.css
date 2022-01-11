@@ -6,8 +6,8 @@
       
         
         html {
-            background: orange;
-            color: white;
+            background: white;
+            color: black;
             font-family: Arial, Helvetica, sans-serif;
         }
         
@@ -16,7 +16,7 @@
         }
         
         main {
-            background: orangered;
+            background: white;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -34,9 +34,9 @@
         
         input {
             height: 30px;
-            border: 2px solid wheat;
+            border: 2px solid black;
             border-radius: 5px;
-            background: wheat;
+            background: white;
             color: black;
             text-align: center;
             outline: none;
@@ -82,11 +82,11 @@
         }
         
         a {
-            color: white;
+            color: black;
         }
         
         a:hover {
-            color: grey
+            color: grey;
         }
         
         .form-group {
@@ -103,19 +103,19 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            color: wheat;
-            background: #fbba50;
+            color: black;
+            background: #white;
         }
         
         .form-group button:disabled {
             cursor: not-allowed;
-            background: wheat !important;
+            background: white !important;
             color: black!important;
         }
         
         .form-group button:hover {
-            background: #d88a0c;
-            color: antiquewhite;
+            background: black;
+            color: grey;
         }
         
         .options {
