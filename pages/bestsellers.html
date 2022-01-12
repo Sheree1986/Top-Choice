@@ -7,20 +7,46 @@
     <title>Best Sellers</title>
     <link rel="stylesheet" href="product.css" />
   </head>
-  <div class="header-content"></div>
-      <img src="../images/logo.png" class="logo"  a href="../index.html" >
-      <div class="wishlist">
-          <div class="counter2" id="badge2">0</div>
-          <img class="wishlist-icon" src="../images/love.png" alt="" />
-      <div class="cart">
-        <div class="counter" id="badge">0</div>
-        <img class="cart-icon" src="../images/cart.png" alt="" />
-      </div>
+</head>
+<div class="header-content"></div>
+    <a href = "../index.html"  target="_blank">
+    <img src="../images/logo.png" class="logo" alt="">
+</a>
+    <div class="wishlist">
+        <div class="counter2" id="badge2">0</div>
+        <img class="wishlist-icon" src="../images/love.png" alt="" />
+    <div class="cart">
+      <div class="counter" id="badge">0</div>
+      <img class="cart-icon" src="../images/cart.png" alt="" />
+    </div>
 
-     
-
-  </div>
+    <nav class="main-navigation">
+      <ul class="menu">
+        <li class="menu-item-has-children"><a href="#">New Arrivals</a>
+          <ul class="sub-menu">
+            <li class="new">
+              <a style="text-decoration: none" href="../pages/newarrivals.html">New Arrivals</a>
+            </li>
+          </ul>
+        </li>
+            <li class="menu-item-has-children"><a href="#">Best Sellers</a>
+          <ul class="sub-menu">
+            <li class="best">
+              <a style="text-decoration: none" href="../pages/bestsellers.html">Popular</a>
+            </li>
+          </ul>
+        </li>
+            <li class="menu-item-has-children"><a href="#">Sale</a>
+          <ul class="sub-menu">
+            <li class="sale">
+              <a style="text-decoration: none" href="../pages/product.html">Sale</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 </div>
+
   </head>
   <body>
     <section class="product-details">
@@ -57,78 +83,33 @@
         <button class="btn" id="btnWish">add to wishlist</button>
       </div>
       
- 
-    <footer id="colophon" class="site-footer" role="contentinfo">
-      <div class="social-wrapper">
-        <ul>
-          <li>
-            <a href="#" target="_blank">
-              <img
-                src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png"
-                alt="Twitter Logo"
-                class="twitter-icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img
-                src="https://www.mchenryvillage.com/images/instagram-icon.png"
-                alt="Instagram Logo"
-                class="instagram-icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                alt="Linkedin Logo"
-                class="linkedin-icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img
+    </section>
+    <footer>
+      <p class="info">Support Emails - help@clothing.com, customersupport@clothing.com</p>
+      <p class="info">Telephone - 180, 00 00 002</p>
+     
+      <p class="footer-credit"><h3>Best Traditional Store In Town</h3></p>
+  <div class="footer-social-container">
+              <a href="#" class="social-link"><h2>   <a href="#" target="_blank">
+                <img
+                  src="https://www.mchenryvillage.com/images/instagram-icon.png"
+                  alt="Instagram Logo"
+                  class="instagram-icon"
+              /></h2></a>
+              <a href="#" class="social-link"><h2>  <img
                 src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico"
                 alt="Facebook Logo"
                 class="facebook-icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
+            /></h2></a>
+              <a href="#" class="social-link"><h2>
               <img
-                src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Google-plus-icon.png"
-                alt="Googleplus Logo"
-                class="googleplus-icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img
-                src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170"
-                alt="Youtube Logo"
-                class="youtube-icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img
-                src="http://www.iconarchive.com/download/i94258/designbolts/vector-foursquare/Foursquare-2.ico"
-                alt="Foursquare Logo"
-                class="foursquare-icon"
-            /></a>
-          </li>
-        </ul>
-      </div>
-
-      <nav class="footer-nav" role="navigation">
-        <p>
-          Copyright &copy; 2021-
-          <?php echo date("Y"); ?>
-          TopChoice. All rights reserved.
-        </p>
-      </nav>
-    </footer>
-
+              src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png"
+              alt="Twitter Logo"
+              class="twitter-icon" >
+            </h2></a>
+         
+          </div>
+</footer>
     <script src="product.js"></script>
   </body>
 </html>
