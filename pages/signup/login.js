@@ -32,10 +32,10 @@ function signIn() {
     // JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
     
     console.log("testing3");
+   
     if (email === "user@gmail.com" && pwd === "user") {
         window.location.href = "../checkout.html";
-     
-    
+ 
   
 } else {
     alert("Invalid information");

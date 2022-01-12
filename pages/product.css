@@ -175,9 +175,11 @@ a.hover {
     width: 500px;
     height: 500px;
     position: relative;
-    background-image: url("../images/10.PNG");
+    background-image: url("../images/lia.png");
     background-size: cover;
   }
+
+  
   .product-images {
     position: absolute;
     bottom: 300px;
