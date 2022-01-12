@@ -34,7 +34,7 @@ function signIn() {
     console.log("testing3");
    
     if (email === "user@gmail.com" && pwd === "user") {
-        window.location.href = "../checkout.html";
+        window.location.href = "./checkout.html";
  
   
 } else {
