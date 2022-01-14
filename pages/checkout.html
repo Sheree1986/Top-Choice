@@ -11,52 +11,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--Boostrap HTML-->
   </head>
-  <link rel="stylesheet" href="../index.css">
-
-
+  <link rel="stylesheet" href="cart.css">
     <!--Boostrap HTML-->
   </head>
-
-  <body>
-    <!-- <section class="main1">
-      <nav>
-        <ul class="navitems-container">
-          <li class="brand">
-            <a href="#" style="text-decoration: none">TopChoice</a>
-          </li>
-
-          <div class="bar">
-            <input class="searchbar" type="text" title="Search" />
-          </div>
-         
-          <li class="new">
-            <a style="text-decoration: none" href="./pages/newarrivals.html">New Arrivals</a>
-          </li>
-          <li class="best">
-            <a style="text-decoration: none" href="./pages/bestsellers.html">Popular</a>
-          </li>
-          <li class="sale">
-            <a style="text-decoration: none" href="./pages/product.html">Sale</a>
-          </li>
-          <form method="get" action="./pages/accountlogin.html">
-          <button class="btn-2">LogIn</button>
-        </form>
-          <div class="cart">
-            <div class="counter">0</div>
-            <img class="cart-icon" src="images/cart.png" alt="" />
-            
-          </div>
-        </ul>
-      </nav>
-    </section>
-  <title> Top Choice Checkout</title> -->
+  <title>Checkout-Top Choice</title>
    
-  <!-- Navigation Bar  -->
+  <!--Navigation Bar-->
   <section class="main1">
     <nav>
       <ul class="navitems-container">
         <li class="brand">
-          <a href="../index.html" style="text-decoration: none">TopChoice</a>
+          <a href="#" style="text-decoration: none">TopChoice</a>
         </li>
 
         <div class="bar">
@@ -72,9 +37,9 @@
           <a style="text-decoration: none" href="../pages/bestsellers.html">Popular</a>
         </li>
         <li class="sale">
-          <a style="text-decoration: none" href="../pages/product.html">Sale</a>
+          <a style="text-decoration: none" href="../pages/sale.html">Sale</a>
         </li>
-        <form method="get" action="../pages/accountlogin.html">
+        <form method="get" action="../pages/signup/accountlogin.html">
         <button class="btn-2">LogIn</button>
       </form>
         <div class="cart">
@@ -84,7 +49,7 @@
         </div>
       </ul>
     </nav>
-  </section> 
+  </section>
 <!--Nav Bar End-->
     <!--Container creates the area / section above the form-->
     <section id="cart" class="pt-5 mt-5 container">
@@ -169,7 +134,7 @@
                 <option value="Arkansas">AR</option> 
                 <option value="California">CA</option>
                 <option value="Colorado">CO</option>
-                <option value="Connecticut">CT</option> 
+                <option value="Connecicut">CT</option> 
                 <option value="Delaware">DE</option>
                 <option value="Florida">FL</option>
                 <option value="Georgia">GA</option>
@@ -275,7 +240,7 @@
                   <option value="Arkansas">AR</option> 
                   <option value="California">CA</option>
                   <option value="Colorado">CO</option>
-                  <option value="Connecticut">CT</option> 
+                  <option value="Connecicut">CT</option> 
                   <option value="Delaware">DE</option>
                   <option value="Florida">FL</option>
                   <option value="Georgia">GA</option>
@@ -384,9 +349,16 @@
             </div>
 
           <hr class="my-4">
-           
-          <button class= "btn btn-primary btn-md btn-block">Purchase</button>
-            
+          <div class="buy-button"> 
+          <button class= "btn btn-primary btn-md btn-block" onclick="checkout()">Purchase</button>
+          </div>
+            <script>
+              function checkout() {
+                alert(
+                  "Thank you for your purchase. Your order confirmation will be sent to your email shortly."
+                );
+              }
+            </script>
           </div>
       </form>
     </div>
@@ -464,7 +436,7 @@
       </footer>
   
       <script src="home.js"></script>
-  
+    </body>
   </html>
   <!--Footer Ends-->
 
@@ -472,6 +444,5 @@
     <!-- Popper  JS first, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="../index.css"></script>
   </body>
 </html>
