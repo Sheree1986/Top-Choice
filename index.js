@@ -1,4 +1,20 @@
+
 let carts = document.querySelectorAll(".addtocart");
+
+document.getElementById('exploreBtn').addEventListener('click', exploreHandler);
+document.getElementById('member').addEventListener('click',memberHandler);
+
+
+function exploreHandler(){
+  window.location.href = ('./pages/newarrivals.html')
+  console.log(window.location)
+  
+}
+
+function memberHandler() {
+  window.location.href = ('./pages/accountlogin.html')
+}
+
 let products = [
   {
     name: "Red dress",
@@ -85,3 +101,7 @@ function totalCost(product) {
 }
 
 onLoadCartNumbers();
+
+
+
+

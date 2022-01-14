@@ -2,6 +2,7 @@ const productImages = document.querySelectorAll(".product-images img"); // selec
 const productImageSlide = document.querySelector(".image-slider"); // selecting image slider element
 //let activeImageSlide = 0; // default slider image
 productImages.forEach((item, i) => {
+    console.log (item)
  // looping through each image thumb
  item.addEventListener("click", () => {
   // adding click event to each image thumbnail
@@ -9,6 +10,7 @@ productImages.forEach((item, i) => {
    .querySelector(".product-images img.active")
    .classList.remove("active"); //// use the classList API to remove and add classes
   item.classList.add("active");
+  
   productImageSlide.style.backgroundImage = `url('${item.src}')`;
  });
 });
