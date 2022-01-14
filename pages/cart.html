@@ -9,13 +9,15 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <!--Link to Stylesheet-->
     <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="home.css">
+   <!--JS page running async as the rest of the page--> 
+     <script src="cart.js"></script>
     <!--Boostrap HTML-->
   </head>
-  <title> Top Choice Cart</title>
+  <title>Cart-Top Choice</title>
    
   <!--Navigation Bar-->
   <section class="main1">
@@ -55,179 +57,127 @@
 
     <!--Page Heading -->
     <section id="cart" class="pt-5 mt-5 container">
-        <h2>Shopping Cart</h2>
+        <h2>Cart</h2>
         <hr>
     </section>
-    <!--Cart Table-->
-    <section id="cart-container" class="container my-5"> 
-        <table width="100%">
-            <thead>
-                <tr>
-                    <!--Cart Table Headers-->
-                    <td>Remove</td>
-                    <td>Image</td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Total</td>
-                </tr>
-            </thead>
+     <!--Cart Table-->
+     <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="table-responsive">
+              <table id="cartTable" class="table">
+                  <thead>
+                <!--Cart Table Headers-->
+                      <tr>
+                          <th>Product</th>
+                          <th></th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                          <th class="text-right"><span id="amount" class="amount">Total</span> </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <!--Product 1-->
+                      <tr>
+                          <td>
+                              <div class="product-img">
+                              <div class="img-prdct"><img src="images/33.png" alt="Red Ethiopian Dress"></div>
+                              </div>
+                          </td>
+                          <td>
+                              <p>Red Ethiopian Dress</p>
+                          </td>
+                          <td>
+                              <div class="button-container">
+                                  <button class="cart-qty-plus" type="button" value="+">+</button>
+                                  <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                  <button class="cart-qty-minus" type="button" value="-">-</button>
+                              </div>
+                          </td>
+                          <td>
+                              <input type="text" value="1450" class="price form-control" disabled>
+                          </td>
+                          <td align="right">$ <span id="amount" class="amount">0</span></td>
+                      </tr>
 
-            <tbody>
-                <tr>
-                    <!--Cart Table Row 1-->
-                    <td><a href="#"><i class= "fas fa-trash-alt"></i></a></td>
-                    <td><img src="images/33.png" alt=""></td>
-                    <td><h5>Red Ethiopian Dress</h5></td>
-                    <td><h5>$1450.00</h5></td>
-                    <td><input class="w-25 pl-1" value="1" type="number"></td>
-                    <td><h5>$1450.00</h5></td>
-                </tr>
-
-                <tr>
-                    <!--Cart Table Row 2-->
-                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                    <td><img src="images/55.png" alt=""></td>
-                    <td><h5>White Ethiopian Dress</h5></td>
-                    <td><h5>$780.00</h5></td>
-                    <td><input class="w-25 pl-1" value="1" type="number"></td>
-                    <td><h5>$780.00</h5></td>
-                </tr>
-
-                <tr>
-                    <!--Cart Table Row 3-->
-                    <td><a href="#"><i class= "fas fa-trash-alt"></i></a></td>
-                    <td><img src="images/44.png" alt=""></td>
-                    <td><h5>Black Ethiopian Dress</h5></td>
-                    <td><h5>$500.00</h5></td>
-                    <td><input class="w-25 pl-1" value="1" type="number"></td>
-                    <td><h5>$500.00</h5></td>
-                </tr>
-
-                <tr>
-                    <!--Cart Table Row 3-->
-                    <td><a href="#"><i class= "fas fa-trash-alt"></i></a></td>
-                    <td><img src="images/6.png" alt=""></td>
-                    <td><h5>Yellow Ethiopian Dress</h5></td>
-                    <td><h5>$450.00</h5></td>
-                    <td><input class="w-25 pl-1" value="1" type="number"></td>
-                    <td><h5>$450.00</h5></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section id="cart-bottom" class="container">
-        <div class="row">
-
-            <!--Cart Total Section-->
-            <div class="total col-lg-6 col-md-6 col-12">
-                <div> 
-                    <h5>Cart Total</h5>
-                    <div class="d-flex justify-content-between">
-                        <h6>Subtotal</h6>
-                        <p> $215.00</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <h6>Shipping</h6>
-                        <p>$50.00</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <h6>Tax</h6>
-                        <p>$5.00</p>
-                    </div>
-                    <hr class="second-hr">
-                    <div class="d-flex justify-content-between">
-                        <h6>Total</h6>
-                        <p>$280.00</p>
-                    </div>
-                    <!-- Button goes to Checkout Page --> 
-                   <a href="checkout.html"> <button class="ml-auto">Proceed To Checkout</button> </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Footer Begins --> 
-    <footer id="colophon" class="site-footer" role="contentinfo">
-        <div class="social-wrapper">
-          <ul>
-            <li>
-              <a href="#" target="_blank">
-                <img
-                  src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png"
-                  alt="Twitter Logo"
-                  class="twitter-icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img
-                  src="https://www.mchenryvillage.com/images/instagram-icon.png"
-                  alt="Instagram Logo"
-                  class="instagram-icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                  alt="Linkedin Logo"
-                  class="linkedin-icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img
-                  src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico"
-                  alt="Facebook Logo"
-                  class="facebook-icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img
-                  src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Google-plus-icon.png"
-                  alt="Googleplus Logo"
-                  class="googleplus-icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img
-                  src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170"
-                  alt="Youtube Logo"
-                  class="youtube-icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img
-                  src="http://www.iconarchive.com/download/i94258/designbolts/vector-foursquare/Foursquare-2.ico"
-                  alt="Foursquare Logo"
-                  class="foursquare-icon"
-              /></a>
-            </li>
-          </ul>
-        </div>
-  
-        <nav class="footer-nav" role="navigation">
-          <p>
-            Copyright &copy; 2021-
-            <?php echo date("Y"); ?>
-            TopChoice. All rights reserved.
-          </p>
-        </nav>
-      </footer>
-  
-      <script src="home.js"></script>
-    </body>
-  </html>
-  <!--Footer Ends-->
-
-    <!-- Optional JavaScript -->
-    <!-- Popper  JS first, then Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  </body>
-</html>
+                    <!--Product 2-->
+                      <tr>
+                          <td>
+                              <div class="product-img">
+                                  <div class="img-prdct"><img src="images/55.png" alt="White Ethiopian Dress"></div>
+                              </div>
+                          </td>
+                          <td>
+                              <p>White Ethiopian Dress</p>
+                          </td>
+                          <td>
+                              <div class="button-container">
+                                  <button class="cart-qty-plus" type="button" value="+">+</button>
+                                  <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                  <button class="cart-qty-minus" type="button" value="-">-</button>
+                              </div>
+                          </td>
+                          <td>
+                              <input type="text" value="780" class="price form-control" disabled>
+                          </td>
+                          <td align="right">$ <span id="amount" class="amount">0</span></td>
+                      </tr>
+                      
+                    <!--Product 3 -->
+                      <tr>
+                          <td>
+                              <div class="product-img">
+                                  <div class="img-prdct"><img src="images/44.png" alt="Black Ethiopian Dress"></div>
+                              </div>
+                          </td>
+                          <td>
+                              <p>Black Ethiopian Dress</p>
+                          </td>
+                          <td>
+                              <div class="button-container">
+                                  <button class="cart-qty-plus" type="button" value="+">+</button>
+                                  <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                  <button class="cart-qty-minus" type="button" value="-">-</button>
+                              </div>
+                          </td>
+                          <td>
+                              <input type="text" value="500" class="price form-control" disabled>
+                          </td>
+                          <td align="right">$ <span id="amount" class="amount">0</span></td>
+                      </tr>
+                     <!--Product 4--->
+                      <tr>
+                          <td>
+                              <div class="product-img">
+                                  <div class="img-prdct"><img src="images/6.png" alt="Yellow Ethiopian Dress"></div>
+                              </div>
+                          </td>
+                          <td>
+                              <p>Yellow Ethiopian Dress</p>
+                          </td>
+                          <td>
+                              <div class="button-container">
+                                  <button class="cart-qty-plus" type="button" value="+">+</button>
+                                  <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                  <button class="cart-qty-minus" type="button" value="-">-</button>
+                              </div>
+                          </td>
+                          <td>
+                              <input type="text" value="450" class="price form-control" disabled>
+                          </td>
+                          <td align="right">$ <span id="amount" class="amount">0</span></td>
+                      </tr>
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                        <td colspan="4"></td><td align="right"> <strong>Total </strong>  $ <span id="total" class="total">0</span></td>
+                      </tr>
+                  </tfoot>
+              </table>
+          </div>
+      </div>
+      <hr class="my-4">
+ <div class="buy-button">          
+<a href="checkout.html"><button class="btn btn-primary btn-md btn-block">Proceed to checkout</button></a>
+</div>
+  </div>
+</div>
