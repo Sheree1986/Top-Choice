@@ -205,7 +205,7 @@ function matchWithRegEx(regEx, field, message) {
 // login btn  WORKING PROPERLY
 document.getElementById("myBtn").onclick = function () {
   if (validateFirstName() === true && validatePassword() === true) {
-    location.href = "../index.html";
+    location.href = "checkout.html";
   } else {
     return false;
   }
